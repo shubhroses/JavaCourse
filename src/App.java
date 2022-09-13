@@ -1,9 +1,11 @@
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 import javax.sound.midi.Soundbank;
 
 import java.awt.*;
+import java.text.NumberFormat;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -95,7 +97,33 @@ public class App {
         double strToInt = Double.parseDouble("123.1");
         System.out.println(strToInt);
 
-        int result = Math.round(1.1F)
+        int result = Math.round(1.1F);
+
+        int res = (int) Math.round(Math.random()*100);
+        System.out.println(res);
+        //Since we are storing a long into an int we can use explicit casting
+
+        // Formating numbers
+        //DOnt use new with abstract classes
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String re = currency.format(123456.891);
+        System.out.println(re);
+
+        String percent = NumberFormat.getPercentInstance().format(0.1);
+        System.out.println(percent);
+
+        //Reading input
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Age: ");
+        Double c = scanner.nextDouble();
+        System.out.println("Your are "+ c);
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Name: ");
+        String name = scan.nextLine().trim();
+        System.out.println("You are " + name);
+
+        
         //1:18.00 in https://www.youtube.com/watch?v=eIrMbAQSU34&ab_channel=ProgrammingwithMosh
     }
 }
