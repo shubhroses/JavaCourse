@@ -123,7 +123,7 @@ public class App {
         String name = scan.nextLine().trim();
         System.out.println("You are " + name);
 
-        
+
         //1:18.00 in https://www.youtube.com/watch?v=eIrMbAQSU34&ab_channel=ProgrammingwithMosh
     }
 }
